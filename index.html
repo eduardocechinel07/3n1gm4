@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página com Senha</title>
+</head>
+<body>
+  <h1>Acesso Restrito</h1>
+  <form id="loginForm" action="/processar-login" method="post">
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    <button type="submit">Acessar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const senhaDigitada = document.getElementById("senha").value;
+      if (senhaDigitada === "J0V3NSB3T3L1TJ") {
+        // Senha correta, redirecionar para a página desejada
+        window.location.href = "https://www.youtube.com/watch?v=ofNzehOQKqE&ab_channel=CortesdoCasimito%5BOFICIAL%5D";
+      } else {
+        alert("Senha incorreta! Tente novamente.");
+      }
+    });
+  </script>
+</body>
+</html>
